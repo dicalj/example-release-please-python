@@ -1,0 +1,15 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  Release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔖 Release
+        uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: python
